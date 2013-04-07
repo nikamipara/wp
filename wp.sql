@@ -1,3 +1,4 @@
+create schema wp;
 -- phpMyAdmin SQL Dump
 -- version 3.5.1
 -- http://www.phpmyadmin.net
