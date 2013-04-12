@@ -85,8 +85,32 @@
 ?>
 <?php
 function login($username,$password)
-		{
-			$SQL_Query="select * from user";
+{	
+			if($username == 'admin')
+			  {
+				if("$password" =='group30')
+				{	session_regenerate_id();
+					$_SESSION['SESS_USERNAME'] = $username;
+					session_write_close();
+						$SID = session_id(); 
+						header("location: admin/admin_home.php?PHPSESSID='$SID'" );
+						exit();
+
+				}
+				else{
+					$errmsg_arr[] = ' password not correct please try again';
+						$errflag = true;
+						if($errflag) {
+							$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
+							session_write_close();
+							header("location: index.php");
+							exit();
+						}
+				
+				}
+			}
+			else{
+				$SQL_Query="select * from user";
 			$result_query=mysql_query($SQL_Query);
 			
 			
@@ -133,7 +157,10 @@ function login($username,$password)
 							header("location: index.php");
 							exit();
 						}
-			}	
-	}
+			}
+			
+			}
+				
+}
 
 ?>

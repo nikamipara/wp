@@ -102,7 +102,7 @@ $birthday = $dat->format('Y-m-d');
 <img src="images/vocabulary-logo.png">
 <div id="form" style="float:right;">
 <h1> Registration form </h1>
-<FORM action="form2.validate.php" onsubmit=" return validateReqFields(this) " method="Post">
+<FORM action="register.php" onsubmit=" return validateReqFields(this) " method="Post">
     <fieldset>
             <legend><strong>Name*</strong></legend>
             <label id="firstname-label" class="firstname">
