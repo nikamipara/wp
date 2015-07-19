@@ -9,13 +9,14 @@
 
 <!DOCTYPE html>
   <head>
-    <title>Todo</title>
+    <title>Vocabulary</title>
  <style type="text/css">
 <!--
 body {
 	background-image: url(images/bg.png);
 	
 }
+
 -->
  </style>
  <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -32,7 +33,7 @@ body {
 <body>
 <!--start container -->
 <div id="container">
-<header>
+<div id="header" style="height:160px"><header>
     <nav>   
       <div id="logo"><a href="#"><img src="images/logo.png" alt="Logo here" /></a>      </div>
       
@@ -43,18 +44,38 @@ body {
   </form> 
       </div>  
       <div id="nav_social"><a href="#"><img src="images/facebook_32.png" alt="Become a fan" width="32" height="32" /></a><a href="#"><img src="images/twitter_32.png" alt="Follows on Twitter" /></a><a href="#"><img src="images/email_32.png" alt="Contact" width="32" height="32" /></a> </div>
+      <div id="menu">
+		
+	  </div>
+      
   </nav>
-  
+
+
     </header>
-	
+</div>
 
 		
 
 <div class="content">
-
+			<div id="menu" style="display:block;background-image:url(images/blackbg.png); margin-left:auto; font-family:snap ITC; color:white; height:35px;">
+    	<ul style="list-style: none; padding: 0px; margin-left:auto; width:960px;">
+            <li style="list-style: none;
+	padding: 50px;	
+	display: inline; font-size:24px;"><a style="text-decoration:none;" href="home.php">Home</a></li>
+            <li style="list-style: none;
+	padding: 50px;	
+	display: inline; font-size:24px;"><a style="text-decoration:none;"href="about.php">About</a></li>
+            <li style="list-style: none;
+	padding: 50px;	
+	display: inline; font-size:24px;"><a href="contact.php" style="text-decoration:none;">Contact us</a></li>
+            <li style="list-style: none;
+	padding: 50px;	
+	display: inline; font-size:24px;"><a href="register.php" style="text-decoration:none">Register</a></li>
+        </ul>
+    </div>
           <ul class="ca-menu">
                     <li>
-                        <a href="#">
+                        <a href="wordlist.php">
                             <span class="ca-icon">A</span>
                             <div class="ca-content">
                                 <h2 class="ca-main">Word List</h2>
@@ -62,7 +83,7 @@ body {
                             </div>
                         </a>                    </li>
                     <li>
-                        <a href="#">
+                        <a href="flash.php">
                             <span class="ca-icon">I</span>
                             <div class="ca-content">
                                 <h2 class="ca-main">Flash Cards</h2>
@@ -73,10 +94,26 @@ body {
            </ul>
 		   <ul>
 		   <li>
-		   <div id="loign">
+		   <div id="login" style="">
+           <br><br><br>
 						<form name="loginform" action="login_exec.php" method="post">
-							<table width="309" border="0" align="center" cellpadding="2" cellspacing="5">
-								<tr>
+							<table width="304" border="0" align="center" cellpadding="2" cellspacing="5">
+								
+							  <tr>
+									<td width="88"><div align="right">Username</div></td>
+									<td width="198"><input name="username" type="text" /></td>
+							  </tr>
+							  <tr>
+									<td><div align="right">Password</div></td>
+									<td><input name="password" type="password" /></td>
+							  </tr>
+							  <tr>
+									
+									<td>	
+                                    	<input name="" type="submit" value="login" />
+                                    </td>
+							  </tr>
+                              <tr>
 									<td colspan="2">
 										<!--the code bellow is used to display the message of the input validation-->
 										 <?php
@@ -91,25 +128,6 @@ body {
 										?>
 									</td>
 								</tr>
-							  <tr>
-									<td width="116"><div align="right">Username</div></td>
-									<td width="177"><input name="username" type="text" /></td>
-							  </tr>
-							  <tr>
-									<td><div align="right">Password</div></td>
-									<td><input name="password" type="password" /></td>
-							  </tr>
-							  <tr>
-									<td>
-                                    	<div align="right">
-                                    		
-                                        </div>
-                                    </td>
-									<td>	
-                                    	<input name="" type="button"  value="Register" onClick="parent.location='register.php'"/>
-                                    	<input name="" type="submit" value="login" />
-                                    </td>
-							  </tr>
 							</table>
 						</form>
 					 </div>
@@ -122,72 +140,46 @@ body {
     <middle>    
       <div class="enter"><P >vocabulary learning is a vital part of education. As part of the language arts, it is considered a CORE subject in formal education. Vocabulary can be built chiefly by two methods: reading and formal vocabulary drill and practice. Obviously, reading is an exercise that has its own rewards, and many students are motivated to enjoy it as a pastime. However, formal vocabulary building is usually not viewed as a “fun” task and is typically left in neglect.<br></P>
         <div class="imgteaser">
-<a href="#"><img src="images/vocab.jpg" alt="Todo el Todo" width="413" height="220" /><span class="desc">
-	<strong>TODO 2011 - Lorem Ipsum quntum</strong>
-		Blandit turpis patria euismod at iaceo appellatio, demoveo esse.</span></a></div>
+<a href="vocab.php"><img src="images/vocab.jpg" alt="Todo el Todo" width="413" height="220" /><span class="desc">
+	<strong>More about Vocabulary</strong>
+		</span></a></div>
       </div>	
-      <div class="section_slogan"><img src="images/quote-right.png" alt="images" /><span class="cursive"> A synonym is a word you use when you can't spell the other one. </span><img src="images/quote-left.png" alt="images" /></div>
+      
     </middle>
     <main>    
       <div class="abox">
       <figure>
       <fcapion>
      <h1>GRE </h1>
-      </fcaption><a href="#"></a><a href="#"><img src="images/gre.jpg" alt="GRE" width="289" height="175" /></a></figure>
+      </fcaption><a href="gre.php"></a><a href="#"><img src="images/gre.jpg" alt="GRE" width="289" height="175" /></a></figure>
       </div>
     <div class="abox">
       <figure>
       <fcapion>
       <h1>GMAT </h1>
       </fcaption>
-      <a href="#"><img src="images/gmat.jpg" alt="GMAT" width="287" height="176" /></a>      </figure>
+      <a href="gmat.php"><img src="images/gmat.jpg" alt="GMAT" width="287" height="176" /></a>      </figure>
     </div>
     <div class="abox">
       <figure>
       <fcapion>
      <h1>CAT</h1>
-      </fcaption><a href="#"></a><a href="#"><img src="images/cat.jpg" alt="CAT" width="289" height="178" /></a></figure>
+      </fcaption><a href="cat.php"></a><a href="#"><img src="images/cat.jpg" alt="CAT" width="289" height="178" /></a></figure>
       </div>   
     </main>
     <!--end main -->
+    <footer>  
+  <div class="section_slogan"><img src="images/quote-right.png" alt="images" /><span class="cursive"> A synonym is a word you use when you can't spell the other one. </span><img src="images/quote-left.png" alt="images" /></div>
+  <div align="center"  id="copyright" style="display:block;background-image:url(images/blackbg.png); font-size:24px;   font-family:snap ITC; color:white; height:35px;">
+    	Copyright Group30
+    </div>
+</footer>
+</div>
 </div>
 <!--end middle -->
 <!--start footer -->
-<footer>  
-  <div id="footer">
-  <div id="footerleft">
-      <h2>Imediacreatives</h2>
-      <ul>
-        <li><a href="http://www.imediacreatives.it">Css3 Kitesurf</a></li>
-        <li><a href="..."> Layout Design Gardenfolio</a></li>
-        <li><a href="..."> BlueBand</a></li>
-      </ul>
-    </div>
-    <div id="footermiddle">
-      <h2>User Comments</h2>
-      <ul>
-        <li><a href="...">SWF XLM Sldeshow</a></li>
-        <li><a href="http://www.imediacreatives.it">Michelangelo</a></li>
-        <li><a href="...">Another Templates Principato</a></li>
-      </ul>
-    </div>
-    <div id="footerright">
-      <h2>Design & Project</h2>
-      <ul>
-        <li><a href="http://www.imediacreatives.it">CSS3 Design</a></li>
-        <li><a href="http://www.imediacreatives.it">Psd to CSS </a></li>
-        <li><a href="http://www.imediacreatives.it">Psd to Html5</a></li>
-      </ul>
-    </div>
-    <details>
-<summary>
-<p><a href="http://www.imediacreatives.it" target="_blank">Imediacreatives.it</a>
-  Copyright &copy; yoursite.com -2011.</p></summary><p></p>
-</details>
-    </div>
-</footer>
-<!--end footer -->
-</div>
+
+
 <!--end container -->
 <!-- Free template distributed by http://freehtml5templates.com -->
   </body>

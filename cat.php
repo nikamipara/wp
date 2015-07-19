@@ -67,84 +67,14 @@ body {
     
     
     <div id="left menu">
-    <h1> Test 101 Results </h1>
+    <h1> Common Admission Test </h1>
     <br>
   	<div style="font-family:Verdana, Geneva, sans-serif; font-size:20px;">
-        <?php
-require_once('auth.php');
-$ssid = session_id();
-if(!isset($_POST['test'])){
-echo 'come via proper path it is not allowed.';
-}
-$result = $_POST;
-//print_r( $result);
-
-$username = $_SESSION['SESS_USERNAME'];
-$fname = $_SESSION['SESS_FIRST_NAME'];
-$lname = $_SESSION['SESS_LAST_NAME'];
-$testno = $_POST['test'];
-$marks = 0;
-
-$ans[1] = "examining one's own thoughts and feelings";
-$ans[2] = "one who loves mankind";
-$ans[3] = "medicine used against poon or a diesease";
-$ans[4] = "able to use the left hand or the right equally well";
-$ans[5] = "to make great effort";
-$ans[6] = "looking back upon past";
-$ans[7] = "one who turn towards himself";
-$ans[8] = "boastful";
-$ans[9] = "doubtful uncertain";
-$ans[10] = "attract";
-
-//echo strtoupper($result['1']);
-//echo strtoupper($ans1);
-//echo "this is reuslrt".strcmp(strtoupper($result['1']),strtoupper($ans1));
-$i=1;
-echo 'True answers <br><br>';
-while($i<11){
-	//echo "ans key".$ans[$i];
-	//echo "ans given ".$result[$i];
-	if(isset($result[$i]) and (strcmp(strtoupper($result[$i]),strtoupper($ans[$i]))==0)){
-		$marks = $marks+ 10;
-		echo "Ans ".$i.' <br>';
-	
-	}
-	$i++;
-}
-	
-
-		//Include database connection details
-		require_once('config.php');
-		$db=Connect_To_Server();
-		$db_found=Connect_To_DB();
-		
-		$qry = "select * from test where username = '$username' and test_id = '$testno'";
-		$result = mysql_query($qry);
-		//print_r($result);
-		 $num_rows = mysql_num_rows($result);
-		
-		if($num_rows != 0){
-			$qry = "UPDATE `test` SET `marks`='$marks' where username = '$username' and test_id = '$testno'";
-			$result1 = mysql_query($qry);
-			if(!isset($result1)){ echo mysql_error;}
-		
-		}
-		else{
-			$qry = "INSERT INTO `test`(`username`, `test_id`, `marks`) VALUES ('$username','$testno','$marks') ";
-			$result = mysql_query($qry);
-			if(!isset($result)){ echo mysql_error;}
-		}
-		echo '<p>Congratulations '.$fname." ".$lname ." you have completed test ".$testno." successfully<br/>";
-		echo "You got ".$marks." out of 100<br/>";
-		echo "You can always try again to improve your reults. To see your progress report go to your profile</p>";
-
-
-
-
-
-?>
-
-
+        <strong>What is CAT? </strong>
+        <p> Common Admission Test (CAT) is a computer based test held in India. This test scores a person on the bases of Quantitative Ability, Data Interpretation, Verbal Ability and Logical Reasoning. The Indian Institutes of Management (IIMs) started this exam and use the test for selecting students for their business administration programs. The test is conducted every year by one of the IIM's based on a policy of rotation. </p><br>
+        
+        <strong>Why Vocabulary is important for CAT? </strong><br>Although direct vocabulary-based questions may not make an appearance in CAT, It is important to note that CAT does test your vocabulary indirectly. Often questions have appeared in which you need to choose the correct usage of simple, every day words. Quite often, these common words have multiple meanings, depending on the context of their use, and the CAT has tested whether you understand which all possible uses a common word can be put to.
+        <br>
     </div>
   	</div>
     

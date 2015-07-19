@@ -9,6 +9,10 @@ main, article, aside, canvas, figure, figure img, figcaption, hgroup, footer, he
 	position: relative;
 	margin: auto;
 }
+#top li
+{
+display: inline;
+}
 nav {
 	margin: auto;
 	float: right;
@@ -165,9 +169,9 @@ input#search-btn{
 	background:url(../images/search-btn.png) no-repeat center;
 }
 footer {
-	background-image: url(../images/footer_bg.png);
+	
 	background-repeat: repeat-x;
-	height: 400px;
+	height: 100px;
 	width: 100%;
 	margin: auto;
 	clear: both;
@@ -200,7 +204,7 @@ opacity: 0.5;
 }
 #footer {
 	width: 1125px;
-	height: 200px;
+	height: 100px;
 	text-align: left;
 	position: relative;
 	line-height: 1.5em;
